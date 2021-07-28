@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/_02_stateful_group_page.dart';
+import 'package:flutter_learn/_03_layout_group_page.dart';
 
 void main() {
-  runApp(StatefulPage());
+  runApp(LayoutPage());
 }
 
 class MyApp extends StatelessWidget {
