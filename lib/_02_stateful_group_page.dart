@@ -118,6 +118,18 @@ class _StatefulPageState extends State<StatefulPage> {
                             contentPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                             hintText: 'Input text',
                             hintStyle: TextStyle(color: Colors.red)),
+                      ),
+                      Container(
+                        height: 100,
+                        margin: EdgeInsets.only(top: 10),
+                        decoration: BoxDecoration(color: Colors.red),
+                        child: PageView(
+                          children: [
+                            _item('Page 1', Colors.red),
+                            _item('Page 2', Colors.green),
+                            _item('Page 3', Colors.blue),
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -128,5 +140,16 @@ class _StatefulPageState extends State<StatefulPage> {
   Future<void> _onRefresh() async {
     await Future.delayed(Duration(milliseconds: 500));
     return null;
+  }
+
+  _item(String title, Color color) {
+    return Container(
+      decoration: BoxDecoration(color: Colors.white),
+      alignment: Alignment.center,
+      child: Text(
+        title,
+        style: TextStyle(fontSize: 22, color: color),
+      ),
+    );
   }
 }
