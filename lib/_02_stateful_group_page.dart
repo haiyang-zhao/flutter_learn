@@ -61,6 +61,12 @@ class _StatefulPageState extends State<StatefulPage> {
         home: Scaffold(
           appBar: AppBar(
             title: Text("StatefulWidget"),
+            leading: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back),
+            ),
           ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: _currentIndex,

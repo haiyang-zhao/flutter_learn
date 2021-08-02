@@ -12,6 +12,12 @@ class StatelessPage extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             title: Text("StatelessWidget"),
+            leading: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back),
+            ),
           ),
 
           body: Container(

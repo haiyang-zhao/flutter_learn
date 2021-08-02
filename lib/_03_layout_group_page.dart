@@ -21,6 +21,12 @@ class _LayoutPageState extends State<LayoutPage> {
         home: Scaffold(
           appBar: AppBar(
             title: Text("Layout usage"),
+            leading: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back),
+            ),
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: null,
