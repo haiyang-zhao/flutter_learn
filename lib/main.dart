@@ -3,6 +3,7 @@ import 'package:flutter_learn/_01_stateless_group_page.dart';
 import 'package:flutter_learn/_02_stateful_group_page.dart';
 import 'package:flutter_learn/_03_layout_group_page.dart';
 import 'package:flutter_learn/_04_gesture_page.dart';
+import 'package:flutter_learn/_05_resource_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         'statefull': (BuildContext context) => StatefulPage(),
         'layout': (BuildContext context) => LayoutPage(),
         'gesture': (BuildContext context) => GesturePage(),
+        'resource': (BuildContext context) => ResourcePage(),
       },
     );
   }
@@ -69,6 +71,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('StatefulWidget组件', StatefulPage(), 'statefull'),
           _item('Layout组件', LayoutPage(), 'layout'),
           _item('手势监听', GesturePage(), 'gesture'),
+          _item('如何使用资源文件', ResourcePage(), 'resource'),
         ],
       ),
     );
